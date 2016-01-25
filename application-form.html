@@ -1,0 +1,47 @@
+<!-- Add to the HTML document application-form.html so that it has the following items.
+    1.  A form that asks the user:
+    •   Their first and last name (as separate fields),
+    •   Their salary requirement as a number, and
+    •   Which job they are applying for, from a list of:
+    ◦   Software Engineer
+    ◦   QA Engineer
+    ◦   Product Manager
+2. The form should also have a submit button that submits the form to the URL /application. This should be a POST request. (For now, JUST focus on the HTML requirements for this request. Don’t build a flask route, yet.)
+    3.  The page should have a large heading and some explanatory text, as well.
+
+ -->
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Skills-HTML-CSS</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <!-- your html goes here -->
+        <h1><b> Apply to Work at Our Rockstar Company!</b></h1>
+        <p class="outlined"> Enter your name and required salary, and select the desired job title.</p>
+        <p>
+            <form action = "/application" form method="post">
+              <fieldset>
+
+              First Name: <input type="text" name="firstname">
+              <br>
+              Last Name: <input type="text" name="lastname" id="lastname">
+              <br>
+              Salary Requirement: <input type="number" name="salary_requirement">
+              <br>
+              Application:
+              <select name="listing">
+                <option value="software_engineer">Software Engineer</option>
+                <option value="qa_engineer">QA Engineer</option>
+                <option value="product_engineer">Product Engineer</option>
+                <option value="product_mgr">Product Manager</option>
+            </select>
+            <br>
+            <input type="submit">
+        </fieldset>
+            </form>
+        </p>
+    </body>
+</html>
